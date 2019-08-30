@@ -11,4 +11,4 @@ COPY . .
 #this port exposed to the docker to map.
 EXPOSE 3110
 
-CMD [ "yarn" , "dev-3110" ]
+CMD [ "yarn" , "start" ]
