@@ -19,3 +19,18 @@ Pull an image or a repository from a registry. [Read more about docker pull](htt
 Run by Docker on `localhost:8080`.
 
 Docker runs processes in isolated containers. A container is a process which runs on a host. The host may be local or remote. When an operator executes `docker run`, the container process that runs is isolated in that it has its own file system, its own networking, and its own isolated process tree separate from the host. [Read more about docker run](https://docs.docker.com/engine/reference/run/).
+
+## Main tutorial notes: workflow example
+
+- [ ] Need to got account in `hub.docker.com` _(pravosleva for example)_
+- [ ] Have project wich ready to dist _(express-sample for example)_. Could be cooked like this:
+```
+$ docker build -t pravosleva/express-sample:helloworld .
+$ docker login
+$ docker push pravosleva/express-sample:helloworld
+```
+- [ ] Have access to customer's hoster console with installed docker:
+```
+$ docker pull pravosleva/express-sample:helloworld
+$ docker run -p 8080:3110 pravosleva/express-sample:helloworld
+```
